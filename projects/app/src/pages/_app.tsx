@@ -48,14 +48,9 @@ function App({ Component, pageProps }: AppProps) {
         feConfigs: { scripts, isPlus }
       } = await clientInitData();
 
-      // log fastgpt
       !isPlus &&
-        console.log(
-          '%cWelcome to FastGPT',
-          'font-family:Arial; color:#3370ff ; font-size:18px; font-weight:bold;',
-          `GitHub：https://github.com/labring/FastGPT`
-        );
-      setScripts(scripts || []);
+
+        setScripts(scripts || []);
     })();
 
     // add window error track
@@ -94,14 +89,9 @@ function App({ Component, pageProps }: AppProps) {
       <Head>
         <title>{feConfigs?.systemTitle || process.env.SYSTEM_NAME || 'GPT'}</title>
         <meta
-          name="description"
-          content="FastGPT is a knowledge-based question answering system built on the LLM. It offers out-of-the-box data processing and model invocation capabilities. Moreover, it allows for workflow orchestration through Flow visualization, thereby enabling complex question and answer scenarios!"
-        />
-        <meta
           name="viewport"
           content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, viewport-fit=cover"
         />
-        <link rel="icon" href={feConfigs.favicon || '/favicon.ico'} />
       </Head>
       {scripts?.map((item, i) => <Script key={i} strategy="lazyOnload" {...item}></Script>)}
 

@@ -22,6 +22,7 @@ import {
   LLMModelItemType,
   VectorModelItemType
 } from '@fastgpt/global/core/ai/model.d';
+import { FALSE } from 'sass';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   getInitConfig();
@@ -52,10 +53,10 @@ const defaultFeConfigs: FeConfigsType = {
   show_contact: true,
   show_git: true,
   show_doc: true,
-  docUrl: 'https://docs.fastgpt.run',
-  openAPIDocUrl: 'https://doc.fastgpt.run/docs/development/openapi',
-  systemTitle: 'FastGPT',
-  authorText: 'Made by FastGPT Team.',
+  docUrl: '',
+  openAPIDocUrl: '',
+  systemTitle: 'Knowledge GPT',
+  authorText: '',
   limit: {
     exportLimitMinutes: 0
   },
@@ -157,23 +158,23 @@ function getModelPrice() {
   global.priceMd = `| 计费项 | 价格: 元/ 1K tokens(包含上下文)|
 | --- | --- |
 ${global.vectorModels
-  ?.map((item) => `| 索引-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 索引-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.chatModels
-  ?.map((item) => `| 对话-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 对话-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.qaModels
-  ?.map((item) => `| 文件QA拆分-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 文件QA拆分-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.cqModels
-  ?.map((item) => `| 问题分类-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 问题分类-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.extractModels
-  ?.map((item) => `| 内容提取-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 内容提取-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 ${global.qgModels
-  ?.map((item) => `| 下一步指引-${item.name} | ${formatPrice(item.price, 1000)} |`)
-  .join('\n')}
+      ?.map((item) => `| 下一步指引-${item.name} | ${formatPrice(item.price, 1000)} |`)
+      .join('\n')}
 `;
   console.log(global.priceMd);
 }

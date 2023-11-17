@@ -35,10 +35,10 @@ const TeamMenu = () => {
         if (feConfigs.isPlus) {
           onOpen();
         } else {
-          toast({
-            status: 'warning',
-            title: t('common.Business edition features')
-          });
+          // toast({
+          //   status: 'warning',
+          //   title: t('common.Business edition features')
+          // });
         }
       }}
     >
@@ -46,8 +46,8 @@ const TeamMenu = () => {
         <Flex w={'100%'} alignItems={'center'}>
           {userInfo?.team ? (
             <>
-              <Image src={userInfo.team.avatar} alt={''} w={'16px'} />
-              <Box ml={2}>{userInfo.team.teamName}</Box>
+              {/* <Image src={userInfo.team.avatar} alt={''} w={'16px'} /> */}
+              <Box ml={2}>Knowledge GPT Team</Box>
             </>
           ) : (
             <>

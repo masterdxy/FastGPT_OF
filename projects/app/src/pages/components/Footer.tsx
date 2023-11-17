@@ -16,59 +16,60 @@ const Footer = () => {
         label: t('home.Footer Product'),
         child: [
           {
-            label: t('home.Footer FastGPT Cloud', { title: feConfigs.systemTitle }),
+            label: t('home.Footer Knowledge GPT', { title: feConfigs.systemTitle }),
             onClick: () => {
               router.push('/app/list');
             }
-          },
-          {
-            label: 'Sealos',
-            onClick: () => {
-              window.open('https://github.com/labring/sealos', '_blank');
-            }
-          },
-          {
-            label: 'Laf',
-            onClick: () => {
-              window.open('https://github.com/labring/laf', '_blank');
-            }
           }
+          // ,
+          // {
+          //   label: 'Sealos',
+          //   onClick: () => {
+          //     window.open('https://github.com/labring/sealos', '_blank');
+          //   }
+          // },
+          // {
+          //   label: 'Laf',
+          //   onClick: () => {
+          //     window.open('https://github.com/labring/laf', '_blank');
+          //   }
+          // }
         ]
       },
-      {
-        label: t('home.Footer Developer'),
-        child: [
-          {
-            label: t('home.Footer Git'),
-            onClick: () => {
-              window.open('https://github.com/labring/FastGPT', '_blank');
-            }
-          },
-          {
-            label: t('home.Footer Docs'),
-            onClick: () => {
-              window.open(`${feConfigs.docUrl}/docs/intro`, '_blank');
-            }
-          }
-        ]
-      },
-      {
-        label: t('home.Footer Support'),
-        child: [
-          {
-            label: t('home.Footer Feedback'),
-            onClick: () => {
-              window.open('https://github.com/labring/FastGPT/issues', '_blank');
-            }
-          },
-          {
-            label: t('home.Community'),
-            onClick: () => {
-              onOpen();
-            }
-          }
-        ]
-      }
+      // {
+      //   label: t('home.Footer Developer'),
+      //   child: [
+      //     {
+      //       label: t('home.Footer Git'),
+      //       onClick: () => {
+      //         window.open('https://github.com/labring/FastGPT', '_blank');
+      //       }
+      //     },
+      //     {
+      //       label: t('home.Footer Docs'),
+      //       onClick: () => {
+      //         window.open(`${feConfigs.docUrl}/docs/intro`, '_blank');
+      //       }
+      //     }
+      //   ]
+      // },
+      // {
+      //   label: t('home.Footer Support'),
+      //   child: [
+      //     {
+      //       label: t('home.Footer Feedback'),
+      //       onClick: () => {
+      //         window.open('https://github.com/labring/FastGPT/issues', '_blank');
+      //       }
+      //     },
+      //     {
+      //       label: t('home.Community'),
+      //       onClick: () => {
+      //         onOpen();
+      //       }
+      //     }
+      //   ]
+      // }
     ],
     [onOpen, router, t]
   );
@@ -84,7 +85,7 @@ const Footer = () => {
     >
       <Box flex={1}>
         <Flex alignItems={'center'}>
-          <Avatar src="/icon/logo.svg" w={['24px', '30px']} />
+          {/* <Avatar src="/icon/logo.svg" w={['24px', '30px']} /> */}
           <Box
             className="textlg"
             fontSize={['xl', '2xl']}
@@ -96,7 +97,7 @@ const Footer = () => {
           </Box>
         </Flex>
         <Box mt={5} fontSize={'sm'} color={'myGray.600'} maxW={'380px'} textAlign={'justify'}>
-          {t('home.FastGPT Desc', { title: feConfigs.systemTitle })}
+          {t('home.Knowledge GPT Desc', { title: feConfigs.systemTitle })}
         </Box>
       </Box>
       {list.map((item) => (

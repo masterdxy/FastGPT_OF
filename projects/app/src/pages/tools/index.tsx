@@ -18,12 +18,12 @@ const Tools = () => {
     },
     ...(feConfigs?.show_appStore
       ? [
-          {
-            icon: 'appStoreLight',
-            label: 'AI应用市场',
-            link: '/appStore'
-          }
-        ]
+        {
+          icon: 'appStoreLight',
+          label: 'AI应用市场',
+          link: '/appStore'
+        }
+      ]
       : []),
     {
       icon: 'common/navbar/pluginLight',
@@ -32,21 +32,21 @@ const Tools = () => {
     },
     ...(feConfigs?.show_git
       ? [
-          {
-            icon: 'git',
-            label: 'GitHub 地址',
-            link: 'https://github.com/labring/FastGPT'
-          }
-        ]
+        // {
+        //   icon: 'git',
+        //   label: 'GitHub 地址',
+        //   link: 'https://github.com/labring/FastGPT'
+        // }
+      ]
       : []),
     ...(feConfigs?.show_doc
       ? [
-          {
-            icon: 'courseLight',
-            label: '使用文档',
-            link: `${feConfigs.docUrl}/docs/intro`
-          }
-        ]
+        // {
+        //   icon: 'courseLight',
+        //   label: '使用文档',
+        //   link: `${feConfigs.docUrl}/docs/intro`
+        // }
+      ]
       : [])
   ];
 
