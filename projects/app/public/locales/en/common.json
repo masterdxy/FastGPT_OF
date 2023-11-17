@@ -223,7 +223,7 @@
         "Model alloy": "Female - Alloy",
         "Model echo": "Male - Echo",
         "Test Listen": "Test",
-        "Test Listen Text": "Hello, this is FastGPT, how can I help you?",
+        "Test Listen Text": "Hello, this is Knowledge , how can I help you?",
         "Web": "Browser (free)"
       }
     },
@@ -271,7 +271,7 @@
     "Mark Data": "Mark Data",
     "Move Failed": "Move Failed",
     "My Dataset": "My Dataset",
-    "Queue Desc": "This data refers to the current amount of training for the entire system. FastGPT uses queued training, and if you have too much data to train, you may need to wait for a while",
+    "Queue Desc": "This data refers to the current amount of training for the entire system. Knowledge  uses queued training, and if you have too much data to train, you may need to wait for a while",
     "Select Dataset": "Select Dataset",
     "Select Folder": "Enter folder",
     "System Data Queue": "Data Queue",
@@ -349,7 +349,7 @@
     "Advanced Settings Desc": "",
     "Choice Debug": "Convenient Debugging",
     "Choice Debug Desc": "Search testing, reference modification, full conversation preview and many other debugging ways",
-    "Choice Desc": "FastGPT follows the Apache License 2.0 open source protocol",
+    "Choice Desc": "Knowledge  follows the Apache License 2.0 open source protocol",
     "Choice Extension": "Infinite Extension",
     "Choice Extension Desc": "HTTP based extension, easy to achieve custom functions",
     "Choice Fast": "Fast",

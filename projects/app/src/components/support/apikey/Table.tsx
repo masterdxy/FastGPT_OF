@@ -53,7 +53,7 @@ const ApiKeyTable = ({ tips, appId }: { tips: string; appId?: string }) => {
   const { Loading } = useLoading();
   const theme = useTheme();
   const { copyData } = useCopyData();
-  const [baseUrl, setBaseUrl] = useState('https://fastgpt.run/api');
+  const [baseUrl, setBaseUrl] = useState('https://ai.nengbank.com/api');
   const [editData, setEditData] = useState<EditProps>();
   const [apiKey, setApiKey] = useState('');
 

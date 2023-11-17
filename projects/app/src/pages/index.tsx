@@ -27,7 +27,7 @@ const Home = ({ homeUrl = '/' }: { homeUrl: string }) => {
   return (
     <>
       <Head>
-        <title>{feConfigs?.systemTitle || 'FKnowledge GPT'}</title>
+        <title>{feConfigs?.systemTitle || 'Knowledge GPT'}</title>
       </Head>
       <Box id="home" bg={'myWhite.600'} h={'100vh'} overflowY={'auto'} overflowX={'hidden'}>
       </Box>

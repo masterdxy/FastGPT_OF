@@ -23,7 +23,7 @@ const defaultChatData: InitChatResponse = {
   chatId: '',
   appId: '',
   app: {
-    name: 'FastGPT',
+    name: 'Knowledge GPT',
     avatar: '/icon/logo.svg',
     intro: '',
     canUse: false

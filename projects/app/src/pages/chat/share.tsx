@@ -180,55 +180,55 @@ const OutLink = ({
       <Flex h={'100%'} flexDirection={['column', 'row']}>
         {showHistory === '1'
           ? ((children: React.ReactNode) => {
-              return isPc ? (
-                <SideBar>{children}</SideBar>
-              ) : (
-                <Drawer
-                  isOpen={isOpenSlider}
-                  placement="left"
-                  autoFocus={false}
-                  size={'xs'}
-                  onClose={onCloseSlider}
-                >
-                  <DrawerOverlay backgroundColor={'rgba(255,255,255,0.5)'} />
-                  <DrawerContent maxWidth={'250px'} boxShadow={'2px 0 10px rgba(0,0,0,0.15)'}>
-                    {children}
-                  </DrawerContent>
-                </Drawer>
-              );
-            })(
-              <ChatHistorySlider
-                appName={shareChatData.app.name}
-                appAvatar={shareChatData.app.avatar}
-                activeChatId={chatId}
-                history={history.map((item) => ({
-                  id: item.chatId,
-                  title: item.title
-                }))}
+            return isPc ? (
+              <SideBar>{children}</SideBar>
+            ) : (
+              <Drawer
+                isOpen={isOpenSlider}
+                placement="left"
+                autoFocus={false}
+                size={'xs'}
                 onClose={onCloseSlider}
-                onChangeChat={(chatId) => {
-                  router.replace({
-                    query: {
-                      ...router.query,
-                      chatId: chatId || ''
-                    }
-                  });
-                  if (!isPc) {
-                    onCloseSlider();
+              >
+                <DrawerOverlay backgroundColor={'rgba(255,255,255,0.5)'} />
+                <DrawerContent maxWidth={'250px'} boxShadow={'2px 0 10px rgba(0,0,0,0.15)'}>
+                  {children}
+                </DrawerContent>
+              </Drawer>
+            );
+          })(
+            <ChatHistorySlider
+              appName={shareChatData.app.name}
+              appAvatar={shareChatData.app.avatar}
+              activeChatId={chatId}
+              history={history.map((item) => ({
+                id: item.chatId,
+                title: item.title
+              }))}
+              onClose={onCloseSlider}
+              onChangeChat={(chatId) => {
+                router.replace({
+                  query: {
+                    ...router.query,
+                    chatId: chatId || ''
                   }
-                }}
-                onDelHistory={delOneShareHistoryByChatId}
-                onClearHistory={() => {
-                  delManyShareChatHistoryByShareId(shareId);
-                  router.replace({
-                    query: {
-                      ...router.query,
-                      chatId: ''
-                    }
-                  });
-                }}
-              />
-            )
+                });
+                if (!isPc) {
+                  onCloseSlider();
+                }
+              }}
+              onDelHistory={delOneShareHistoryByChatId}
+              onClearHistory={() => {
+                delManyShareChatHistoryByShareId(shareId);
+                router.replace({
+                  query: {
+                    ...router.query,
+                    chatId: ''
+                  }
+                });
+              }}
+            />
+          )
           : null}
 
         {/* chat container */}
