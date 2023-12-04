@@ -112,7 +112,7 @@ const Login = () => {
           >
             <DynamicComponent type={pageType} />
 
-            {feConfigs?.show_contact && (
+            {/* {feConfigs?.show_contact && (
               <Box
                 fontSize={'sm'}
                 color={'myGray.600'}
@@ -124,7 +124,7 @@ const Login = () => {
               >
                 无法登录，点击联系
               </Box>
-            )}
+            )} */}
           </Box>
         </Flex>
 
